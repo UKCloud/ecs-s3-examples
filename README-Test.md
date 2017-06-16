@@ -25,7 +25,6 @@ export UKCLOUD_S3_HOST=casxxxx.ukcloud.com
 
 Test that the variables are set with:
 
-Linux:
 ```
 echo $UKCLOUD_S3_UID
 printenv | grep S3
@@ -34,14 +33,12 @@ set | grep S3
 
 To remove the variables that you set run:
 
-Linux:
 ```
 for i in UID SECRET HOST; do unset UKCLOUD_S3_$i; done
 ```
 
 To remove individual variables that you set run:
 
-Linux:
 ```
 unset UKCLOUD_S3_UID
 unset UKCLOUD_S3_SECRET
