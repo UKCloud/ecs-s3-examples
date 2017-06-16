@@ -1,7 +1,7 @@
-# UKCloud Atmos S3 Storage Examples
+# UKCloud ECS S3 Storage Examples
 
 This project contains sample code for common operations against
-UKCloud's Atmos based Cloud Storage service. Whilst Atmos itslef
+UKCloud's ECS based Cloud Storage service. Whilst ECS itslef
 supports both an S3 compatible and an EMC native API the samples in this
 repository are designed to work with the S3 compatible endpoint only.
 
@@ -12,56 +12,57 @@ vairables. Please ensure the following are exported:
 
 ```
 UKCLOUD_S3_UID
-UKCLOUD_S3_SUBTENANT
 UKCLOUD_S3_SECRET
 UKCLOUD_S3_HOST
 ```
 
 Linux:
 ```
-export UKCLOUD_S3_UID=abc12345543434324234jdlfkjwsadde
-export UKCLOUD_S3_SUBTENANT=A123456678912345
+export UKCLOUD_S3_UID=A123456678912345
 export UKCLOUD_S3_SECRET=ABC2346253HFDG453=
 export UKCLOUD_S3_HOST=casxxxx.ukcloud.com
 ```
-
-Windows:
-```
-set UKCLOUD_S3_UID=abc12345543434324234jdlfkjwsadde
-set UKCLOUD_S3_SUBTENANT=A123456678912345
-set UKCLOUD_S3_SECRET=ABC2346253HFDG453=
-set UKCLOUD_S3_HOST=casxxxx.ukcloud.com
-```
-
-**n.b if you have been provided an Atmos username in the following
-format: "abc12345543434324234jdlfkjwsadde/A123456678912345"**  
-**The uid is *before* the "/" and the subtenant is *after* the "/"**
 
 Test that the variables are set with:
 
 Linux:
 ```
 echo $UKCLOUD_S3_UID
+printenv | grep S3
+set | grep S3
+
 ```
 
-Windows:
+To remove the variables that you set run:
+
+Linux:
 ```
-echo %UKCLOUD_S3_UID%
+for i in UID SECRET HOST; do unset UKCLOUD_S3_$i; done
 ```
+
+To remove individual variables that you set run:
+
+Linux:
+```
+unset UKCLOUD_S3_UID
+unset UKCLOUD_S3_SECRET
+unset UKCLOUD_S3_HOST
+
+```
+
 
 ## Languages
 Examples are available for the following languages / SDKs
 - Ruby (Fog)
 - Python (Boto)
 - Go (Minio)
-- Java (Minio)
 
 Language specific instructions are available in each directory
 
 ## Functions
 The following common functions are demonstrated in these samples:
 
-- Connect to Atmos S3
+- Connect to ECS S3
 - List all directories
 - List a specific directory
 - Create a directory
