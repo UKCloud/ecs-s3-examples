@@ -1,14 +1,14 @@
 # UKCloud ECS S3 Storage Examples
 
 This project contains sample code for common operations against
-UKCloud's ECS based Cloud Storage service. Whilst ECS itslef
+UKCloud's ECS based Cloud Storage service. Whilst ECS itself
 supports both an S3 compatible and an EMC native API the samples in this
 repository are designed to work with the S3 compatible endpoint only.
 
 ## Credentials
 In order to provide a common way to pass credentials to the sample code,
 each example will expect to be able to get credentials from environment
-vairables. Please ensure the following are exported:
+variables. Please ensure the following are exported:
 
 ```
 UKCLOUD_S3_UID
