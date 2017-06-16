@@ -75,7 +75,6 @@ How to compile GO using GO Version Manager to make it work on RHEL or CentOS 7:
 ## Get gvm:
 ```
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-
 ```
 
 Update your bash:
