@@ -30,7 +30,6 @@ Linux:
 echo $UKCLOUD_S3_UID
 printenv | grep S3
 set | grep S3
-
 ```
 
 To remove the variables that you set run:
