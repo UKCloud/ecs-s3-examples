@@ -71,8 +71,9 @@ ok   examples 0.628s
 
 How to compile GO using GO Version Manager to make it work on RHEL or CentOS 7:
 ------------
+[GVM - GitHub Repository](https://github.com/moovweb/gvm)
 
-## Get gvm:
+## Install gvm:
 ```
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 ```
@@ -102,7 +103,7 @@ go version:
 go version go1.8.3 linux/amd64
 ```
 
-# Manual Edit of bash profile
+# Manual Edit of Bash profile
 * vi .bash_profie
 ```
 # .bash_profile
