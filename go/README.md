@@ -16,9 +16,8 @@ pwd
 ```
 
 ### Repository required
-```
 [Minio - GitHub Repository](github.com/minio/minio-go)
-
+```
 go get github.com/minio/minio-go
 
 ```
