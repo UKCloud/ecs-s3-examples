@@ -2,14 +2,28 @@
 
 Example functions are all in the file lib/examples.rb
 
-To try it out run:
+## Getting Started
+
+Clone the repository and cd to the directory that contains the following:
+```sh
+ls
+Gemfile  lib  README.md  spec
+```
+
+## Running the code
+
+Setup your `UKCLOUD_S3_[...]` environment variables as
+specified
+[here](https://github.com/UKCloud/ecs-s3-examples/blob/master/README.md).
+
+Run the script:
 
 ```
 bundle install
 bundle exec rspec
 ```
 
-Sample Output:
+Sample output:
 ```
 Using 1498131501 as Test Directory Name
 ..........
