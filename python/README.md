@@ -1,16 +1,25 @@
 # UKCloud S3 Storage Examples - Python / BOTO S3
-
 Example functions are all in the file lib/examples.py
 
-To try it out run:
+## Getting Started
 
+
+First install the prerequisite library:
 ```
 pip install -r requirements.txt
-
-python lib/examples.py
 ```
 
+## Running Examples
 
+Setup your `UKCLOUD_S3_[...]` environment variables as
+specified
+[here](https://github.com/UKCloud/ecs-s3-examples/blob/master/README.md).
+
+Run the script:
+
+```
+python lib/examples.py
+```
 Sample output:
 
 ```
