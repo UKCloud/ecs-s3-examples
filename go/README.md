@@ -15,7 +15,15 @@ pwd
 /root/projects/go
 ```
 
-## To try it out, from run:
+### Repository required
+```
+[Minio - GitHub Repository](github.com/minio/minio-go)
+
+go get github.com/minio/minio-go
+
+```
+
+## To try it out:
 
 ```
 go build src/examples/examples.go
@@ -68,6 +76,11 @@ ok   examples 0.628s
 
 ```
 
+Required repository
+------------
+```
+go get github.com/minio/minio-go
+```
 
 How to compile GO using GO Version Manager to make it work on RHEL or CentOS 7:
 ------------
