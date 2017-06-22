@@ -18,13 +18,13 @@ Setup your `UKCLOUD_S3_[...]` environment variables as
 specified
 [here](https://github.com/UKCloud/esc-s3-examples/blob/master/README.md).
 
-Visit the examples folder:
+Visit the examples directory:
 
 ```bash
 cd $GOPATH/src/github.com/UKCloud/esc-s3-examples/go/examples
 ```
 
-And run the examples:
+Run the examples:
 
 ```
 go build
