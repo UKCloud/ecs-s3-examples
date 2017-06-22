@@ -8,7 +8,7 @@ please do so before continuing.
 
 First fetch the example code:
 
-```bash
+```
 go get -u github.com/UKCloud/esc-s3-examples/go/examples
 ```
 
@@ -26,7 +26,7 @@ cd $GOPATH/src/github.com/UKCloud/esc-s3-examples/go/examples
 
 And run the examples:
 
-```bash
+```
 go build
 ./examples
 ```
