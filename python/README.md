@@ -9,7 +9,7 @@ First install the prerequisite library:
 pip install -r requirements.txt
 ```
 
-## Running Examples
+## Running the code
 
 Setup your `UKCLOUD_S3_[...]` environment variables as
 specified
