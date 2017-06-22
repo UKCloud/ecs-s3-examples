@@ -9,19 +9,19 @@ please do so before continuing.
 First fetch the example code:
 
 ```
-go get -u github.com/UKCloud/esc-s3-examples/go/examples
+go get -u github.com/UKCloud/ecs-s3-examples/go/examples
 ```
 
 ## Running Examples
 
 Setup your `UKCLOUD_S3_[...]` environment variables as
 specified
-[here](https://github.com/UKCloud/esc-s3-examples/blob/master/README.md).
+[here](https://github.com/UKCloud/ecs-s3-examples/blob/master/README.md).
 
 Visit the examples directory:
 
 ```bash
-cd $GOPATH/src/github.com/UKCloud/esc-s3-examples/go/examples
+cd $GOPATH/src/github.com/UKCloud/ecs-s3-examples/go/examples
 ```
 
 Run the examples:
