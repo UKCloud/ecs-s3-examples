@@ -20,7 +20,7 @@ Linux:
 ```
 export UKCLOUD_S3_UID=A123456678912345
 export UKCLOUD_S3_SECRET=ABC2346253HFDG453=
-export UKCLOUD_S3_HOST=casxxxx.ukcloud.com
+export UKCLOUD_S3_HOST=cas.xxxx.ukcloud.com
 ```
 
 Test that the variables are set with:
