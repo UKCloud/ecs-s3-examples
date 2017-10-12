@@ -99,7 +99,7 @@ say "Using file name: $file_name for example S3 functions";
     unlink $file_downloaded;
 }
 
-# get a public url for a file (with an expiry time)
+# get a public url for a file
 {
     say "Getting a public url for file: $file_name";
     my $dir = $client->bucket( name => $directory_name );
