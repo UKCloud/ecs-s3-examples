@@ -6,7 +6,6 @@ use 5.10.0;
 
 use File::Slurp qw/read_file/;
 use Net::Amazon::S3;
-use Net::SFTP::Foreign;
 
 my $s3 = Net::Amazon::S3->new(
   aws_access_key_id     => $ENV{UKCLOUD_S3_UID},
