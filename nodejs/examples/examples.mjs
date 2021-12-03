@@ -77,7 +77,7 @@ try {
 
 // Delete an object from a bucket
 try {
-    const DelObject = await client.send(new DeleteObjectCommand({ Bucket: BUCKET_NAME, Key: 'test-dir/testObject.txt' }));
+    const delObject = await client.send(new DeleteObjectCommand({ Bucket: BUCKET_NAME, Key: 'test-dir/testObject.txt' }));
     console.log(`Successfully deleted object 'test-dir/testObject.txt' in the bucket '${BUCKET_NAME}'`);
 } catch (err) {
     console.error(`An error occurred deleting object 'test-dir/testObject.txt' from the bucket '${BUCKET_NAME}': ${err}`);
@@ -85,7 +85,7 @@ try {
 
 // Delete a directory in a bucket
 try {
-    const DelDir = await client.send(new DeleteObjectCommand({ Bucket: BUCKET_NAME, Key: 'test-dir/' }));
+    const delDir = await client.send(new DeleteObjectCommand({ Bucket: BUCKET_NAME, Key: 'test-dir/' }));
     console.log(`Successfully deleted directory 'test-dir/' in the bucket '${BUCKET_NAME}'`);
 } catch (err) {
     console.error(`An error occurred deleting directory 'test-dir/' from the bucket '${BUCKET_NAME}': ${err}`);
