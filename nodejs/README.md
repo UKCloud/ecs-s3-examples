@@ -2,7 +2,7 @@
 
 This directory contains [Node.js](https://nodejs.org/en/) examples for interacting with UKCloud ECS S3 storage.
 
-This code uses the following packages:
+The [code](examples/examples.mjs) uses the following packages:
 
 * [@aws-sdk/client-s3](https://www.npmjs.com/package/@aws-sdk/client-s3) - [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-s3/index.html).
 
