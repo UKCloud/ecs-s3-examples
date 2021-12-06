@@ -8,6 +8,8 @@ The [code](examples/examples.mjs) uses the following SDK packages:
 
 * [@aws-sdk/s3-request-presigner](https://www.npmjs.com/package/@aws-sdk/s3-request-presigner) - [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/modules/_aws_sdk_s3_request_presigner.html).
 
+* [fs](https://nodejs.org/api/fs.html).
+
 ## Getting Started
 
 Before you begin, you will need [git](https://git-scm.com/) and [Docker](https://www.docker.com/) installed on your system.
@@ -52,8 +54,11 @@ Successfully created object 'test-dir/testObject.txt' in the bucket 'version-tes
 0 - Object: test-dir/, ETag: "d41d8cd98f00b204e9800998ecf8427e"
 1 - Getting object: test-dir/testObject.txt
 1 - Object: test-dir/testObject.txt, ETag: "c2a3ecb65f0a9ae43a030f813848aef6"
+2 - Getting object: uploadfile.txt
+2 - Object: uploadfile.txt, ETag: "3a41e5f11afa30e659116eee627bbf0b"
 Successfully downloaded object 'testObject.txt' from the bucket 'version-testing'
-Successfully generated public URL for object 'test-dir/testObject.txt' in the bucket 'version-testing': https://version-testing.cas.cor00005.ukcloud.com/test-dir/testObject.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=...&X-Amz-Date=20211203T134915Z&X-Amz-Expires=3600&X-Amz-Signature=...-Amz-SignedHeaders=host&x-id=GetObject
+Successfully generated public URL for object 'test-dir/testObject.txt' in the bucket 'version-testing': https://version-testing.cas.cor00005.ukcloud.com/test-dir/testObject.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=&X-Amz-Date=20211206T180157Z&X-Amz-Expires=3600&X-Amz-Signature=&X-Amz-SignedHeaders=host&x-id=GetObject
+Successfully uploaded object '/usr/src/app/uploadfile.txt' to the bucket 'version-testing'
 Successfully deleted object 'test-dir/testObject.txt' in the bucket 'version-testing'
 Successfully deleted directory 'test-dir/' in the bucket 'version-testing'
 ```
