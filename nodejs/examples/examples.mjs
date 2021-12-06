@@ -21,7 +21,12 @@ const client = new S3Client({
 
 // Create a directory in a bucket
 try {
-    const putDir = await client.send(new PutObjectCommand({ Bucket: BUCKET_NAME, Key: 'test-dir/' }));
+    await client.send(
+        new PutObjectCommand({
+            Bucket: BUCKET_NAME,
+            Key: 'test-dir/'
+        })
+    );
     console.log(`Successfully created directory 'test-dir/' in the bucket '${BUCKET_NAME}'`);
 } catch (err) {
     console.error(`An error occurred creating directory 'test-dir/' in the bucket '${BUCKET_NAME}': ${err}`);
@@ -29,7 +34,13 @@ try {
 
 // Create an object in a bucket
 try {
-    const putObject = await client.send(new PutObjectCommand({ Bucket: BUCKET_NAME, Key: 'test-dir/testObject.txt', Body: 'Uploaded test object.' }));
+    await client.send(
+        new PutObjectCommand({
+            Bucket: BUCKET_NAME,
+            Key: 'test-dir/testObject.txt',
+            Body: 'Uploaded test object.'
+        })
+    );
     console.log(`Successfully created object 'test-dir/testObject.txt' in the bucket '${BUCKET_NAME}'`);
 } catch (err) {
     console.error(`An error occurred creating object 'test-dir/testObject.txt' in the bucket '${BUCKET_NAME}': ${err}`);
@@ -46,17 +57,51 @@ try {
 try {
     for (const [index, object] of objects.Contents.entries()) {
         console.log(`${index} - Getting object: ${object.Key}`);
-        const resp = await client.send(new GetObjectCommand({ Bucket: BUCKET_NAME, Key: object.Key }));
+        const resp = await client.send(
+            new GetObjectCommand({
+                Bucket: BUCKET_NAME,
+                Key: object.Key
+            })
+        );
         console.log(`${index} - Object: ${object.Key}, ETag: ${resp.ETag}`);
     };
 } catch (err) {
     console.error(`An error occurred getting objects for the bucket '${BUCKET_NAME}': ${err}`);
 };
 
+// Create a file to be upload
+fs.writeFileSync('/usr/src/app/uploadfile.txt', 'Upload me!', (_) => {
+    console.log("Successfully wrote file '/usr/src/app/uploadfile.txt'");
+});
+
+// Upload an object (file) to a bucket
+try {
+    // Load the contents of 'uploadfile.txt'
+    fs.readFile('/usr/src/app/uploadfile.txt', 'utf8', async function (_, data) {
+        await client.send(
+            new PutObjectCommand({
+                Bucket: BUCKET_NAME,
+                Key: 'uploadfile.txt',
+                Body: data
+            })
+        )
+        console.log(`Successfully uploaded object '/usr/src/app/uploadfile.txt' to the bucket '${BUCKET_NAME}'`);
+    });
+} catch (err) {
+    console.error(`An error occurred uploading object '/usr/src/app/uploadfile.txt' to the bucket '${BUCKET_NAME}': ${err}`);
+};
+
 // Download an object (file) from a bucket
 try {
-    const downloadFile = await client.send(new GetObjectCommand({ Bucket: BUCKET_NAME, Key: 'test-dir/testObject.txt' }));
+    const downloadFile = await client.send(
+        new GetObjectCommand({
+            Bucket: BUCKET_NAME,
+            Key: 'test-dir/testObject.txt'
+        })
+    );
+    // Create a write stream
     const writeStream = fs.createWriteStream('/usr/src/app/testObject.txt');
+    // Pipe the object's body to the write stream
     downloadFile.Body.pipe(writeStream);
     console.log(`Successfully downloaded object 'testObject.txt' from the bucket '${BUCKET_NAME}'`);
 } catch (err) {
@@ -77,7 +122,12 @@ try {
 
 // Delete an object from a bucket
 try {
-    const delObject = await client.send(new DeleteObjectCommand({ Bucket: BUCKET_NAME, Key: 'test-dir/testObject.txt' }));
+    await client.send(
+        new DeleteObjectCommand({
+            Bucket: BUCKET_NAME,
+            Key: 'test-dir/testObject.txt'
+        })
+    );
     console.log(`Successfully deleted object 'test-dir/testObject.txt' in the bucket '${BUCKET_NAME}'`);
 } catch (err) {
     console.error(`An error occurred deleting object 'test-dir/testObject.txt' from the bucket '${BUCKET_NAME}': ${err}`);
@@ -85,7 +135,12 @@ try {
 
 // Delete a directory in a bucket
 try {
-    const delDir = await client.send(new DeleteObjectCommand({ Bucket: BUCKET_NAME, Key: 'test-dir/' }));
+    await client.send(
+        new DeleteObjectCommand({
+            Bucket: BUCKET_NAME,
+            Key: 'test-dir/'
+        })
+    );
     console.log(`Successfully deleted directory 'test-dir/' in the bucket '${BUCKET_NAME}'`);
 } catch (err) {
     console.error(`An error occurred deleting directory 'test-dir/' from the bucket '${BUCKET_NAME}': ${err}`);
