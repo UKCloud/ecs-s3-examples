@@ -13,7 +13,7 @@ const UKCLOUD_S3_HOST = process.env.UKCLOUD_S3_HOST;
 const REGION = process.env.REGION;
 const BUCKET_NAME = process.env.BUCKET_NAME;
 
-// Initalise client
+// Initialise client
 const client = new S3Client({
     endpoint: UKCLOUD_S3_HOST,
     region: REGION,
