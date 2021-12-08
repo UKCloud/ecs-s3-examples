@@ -48,9 +48,10 @@ unset UKCLOUD_S3_HOST
 
 ## Languages
 Examples are available for the following languages / SDKs
-- Ruby (Fog)
-- Python (Boto)
 - Go (Minio)
+- Node.js (aws-sdk/client-s3)
+- Python (Boto)
+- Ruby (Fog)
 
 Language specific instructions are available in each directory
 
@@ -70,7 +71,7 @@ The following common functions are demonstrated in these samples:
 ## Contribution
 This repository is a work in progress and as such will be updated over
 time. If you would like to contribute examples, please Fork this repo
-and create a Pull Request with your contribution. 
+and create a Pull Request with your contribution.
 If you would like to see examples of other functions not listed here but
 do not have time to contribute then please raise an Issue in Github and
 we will look at your request ASAP.

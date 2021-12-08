@@ -1,0 +1,7 @@
+FROM node:16-alpine
+RUN mkdir -p /usr/src/app && chown -R node:node /usr/src/app
+WORKDIR /usr/src/app
+RUN npm install @aws-sdk/client-s3@3.43.0 @aws-sdk/s3-request-presigner@3.44.0
+COPY --chown=node:node examples/examples.mjs examples.mjs
+USER node
+CMD ["node", "examples.mjs"]
