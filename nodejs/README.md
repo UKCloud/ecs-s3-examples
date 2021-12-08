@@ -47,7 +47,7 @@ docker run --rm --name ecs-s3-examples-nodejs \
 
 The output should be similar to:
 
-```
+```text
 Successfully created directory 'test-dir/' in the bucket 'version-testing'
 Successfully created object 'test-dir/testObject.txt' in the bucket 'version-testing'
 0 - Getting object: test-dir/
